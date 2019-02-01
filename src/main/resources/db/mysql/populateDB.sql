@@ -1,7 +1,7 @@
-INSERT IGNORE INTO ofertas VALUES (1, "XBOX", "Consola de juegos", 10, '2019-01-20');
-INSERT IGNORE INTO ofertas VALUES (2, "XBOX", "Consola de juegos", 10, '2019-02-01');
-INSERT IGNORE INTO ofertas VALUES (3, "XBOX", "Consola de juegos", 10, '2019-02-03');
-INSERT IGNORE INTO ofertas VALUES (4, "XBOX", "Consola de juegos", 10, '2019-02-05');
+INSERT IGNORE INTO ofertas VALUES (1, "XBOX ONE", "Consola de juegos", 10, '2019-01-20');
+INSERT IGNORE INTO ofertas VALUES (2, "PlayStation 7", "Otra consola de juegos", 30, '2019-02-01');
+INSERT IGNORE INTO ofertas VALUES (3, "Ratón inalámbrico Xing-Wang", "Dispositivo de entrada chino", 20, '2019-02-03');
+INSERT IGNORE INTO ofertas VALUES (4, "Monitor Sony 4K", "Monitor alta definición", 40, '2019-02-05');
 
 INSERT IGNORE INTO vets VALUES (1, 'James', 'Carter');
 INSERT IGNORE INTO vets VALUES (2, 'Helen', 'Leary');
