@@ -33,7 +33,7 @@ public class Oferta extends BaseEntity {
 	private Date fecha;
 
 	@Column(name = "descuento")
-	@NotEmpty
+	@NotNull
 	private Double descuento;
 
 	public String getTitulo() {
