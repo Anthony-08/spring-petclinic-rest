@@ -7,12 +7,12 @@ import org.springframework.samples.petclinic.model.Oferta;
 
 public interface OfertaService {
 
-   Oferta findById(int id);
+	Oferta findById(int id);
 
-   List<Oferta> findAll();
+	List<Oferta> findAll();
 
-   Oferta guardarOferta(Oferta oferta);
+	Oferta guardarOferta(Oferta oferta);
 
-   void borrarOferta(int id);
+	void borrarOferta(int id);
 
 }

@@ -7,7 +7,16 @@ DROP TABLE types IF EXISTS;
 DROP TABLE owners IF EXISTS;
 DROP TABLE roles IF EXISTS;
 DROP TABLE users IF EXISTS;
+DROP TABLE ofertas IF EXISTS;
 
+
+create table ofertas (
+  id INTEGER IDENTITY primary key,
+  titulo varchar(30) not null,
+  detalle varchar(200),
+  descuento FLOAT,
+  fecha date not null
+);
 
 CREATE TABLE vets (
   id         INTEGER IDENTITY PRIMARY KEY,
