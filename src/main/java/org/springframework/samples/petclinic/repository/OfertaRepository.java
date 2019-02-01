@@ -11,7 +11,7 @@ import org.springframework.samples.petclinic.model.Oferta;
 @Resource
 public interface OfertaRepository extends JpaRepository<Oferta, Integer> {
 
-	@Query("select o from Oferta o where o.fecha >= CURRENT_TIME")
+	@Query("select o from Oferta o where o.fecha >= CURRENT_DATE")
 	List<Oferta> findOfertasVigentes();
 
 }

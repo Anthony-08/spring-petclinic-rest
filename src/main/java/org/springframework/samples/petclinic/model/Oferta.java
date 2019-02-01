@@ -14,24 +14,24 @@ import org.springframework.samples.petclinic.model.BaseEntity;
 
 @Entity
 @Table(name = "ofertas")
-public class Oferta extends BaseEntity{
-	
+public class Oferta extends BaseEntity {
+
 	@Column(name = "titulo")
-    @NotEmpty
-    private String titulo;
+	@NotEmpty
+	private String titulo;
 
-    @Column(name = "detalle")
-    @NotEmpty
-    private String detalle;
+	@Column(name = "detalle")
+	@NotEmpty
+	private String detalle;
 
-    @Column(name = "fecha")
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(pattern = "yyyy/MM/dd")
-    private Date fecha;
-    
-    @Column(name = "descuento")
-    @NotEmpty
-    private Double descuento;
+	@Column(name = "fecha")
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "yyyy/MM/dd")
+	private Date fecha;
+
+	@Column(name = "descuento")
+	@NotEmpty
+	private Double descuento;
 
 	public String getTitulo() {
 		return titulo;
@@ -64,5 +64,5 @@ public class Oferta extends BaseEntity{
 	public void setDescuento(Double descuento) {
 		this.descuento = descuento;
 	}
-    
+
 }
