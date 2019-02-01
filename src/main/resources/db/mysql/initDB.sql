@@ -8,6 +8,14 @@ GRANT ALL PRIVILEGES ON petclinic.* TO pc@localhost IDENTIFIED BY 'pc';
 
 USE petclinic;
 
+create table if not exists ofertas (
+  id INT(10) unsigned not null auto_increment primary key,
+  titulo varchar(30) not null,
+  detalle varchar (200),
+  descuento int(2),
+  fecha date not null
+) engine=InnoDB;
+
 CREATE TABLE IF NOT EXISTS vets (
   id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   first_name VARCHAR(30),
