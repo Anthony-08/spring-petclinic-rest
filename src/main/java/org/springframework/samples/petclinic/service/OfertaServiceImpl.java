@@ -42,40 +42,38 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Mostly used as a facade for all Petclinic controllers
- * Also a placeholder for @Transactional and @Cacheable annotations
+ * Mostly used as a facade for all Petclinic controllers Also a placeholder
+ * for @Transactional and @Cacheable annotations
  *
  * @author Michael Isvy
  * @author Vitaliy Fedoriv
  */
 
-
 @Service
-public class OfertaServiceImpl implements OfertaService{
+public class OfertaServiceImpl implements OfertaService {
 
-   @Autowired
-   private OfertaRepository ofertaRepo;
+	@Autowired
+	private OfertaRepository ofertaRepo;
 
-   public Oferta findById(int id) {
-       return this.ofertaRepo.findOne(id);
-   }
+	public Oferta findById(int id) {
+		return this.ofertaRepo.findOne(id);
+	}
 
-   public List<Oferta> findAll() {
-       return this.ofertaRepo.findAll();
-   }
+	public List<Oferta> findAll() {
+		return this.ofertaRepo.findAll();
+	}
 
-   public Oferta guardarOferta(Oferta oferta) {
-       return this.ofertaRepo.save(oferta);
-   }
+	public Oferta guardarOferta(Oferta oferta) {
+		return this.ofertaRepo.save(oferta);
+	}
 
-   public List<Oferta> findOfertasVigentes() {
-	return ofertaRepo.findOfertasVigentes();
-}
+	public List<Oferta> findOfertasVigentes() {
+		return ofertaRepo.findOfertasVigentes();
+	}
 
-public void borrarOferta(int id) {
-       this.ofertaRepo.delete(id);;
-   }
-
-
+	public void borrarOferta(int id) {
+		this.ofertaRepo.delete(id);
+		;
+	}
 
 }
