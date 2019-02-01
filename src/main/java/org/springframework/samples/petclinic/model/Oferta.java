@@ -13,26 +13,28 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.samples.petclinic.model.BaseEntity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name = "ofertas")
-public class Oferta extends BaseEntity{
-	
+public class Oferta extends BaseEntity {
+
 	@Column(name = "titulo")
-    @NotEmpty
-    private String titulo;
+	@NotEmpty
+	private String titulo;
 
-    @Column(name = "detalle")
-    @NotEmpty
-    private String detalle;
+	@Column(name = "detalle")
+	@NotEmpty
+	private String detalle;
 
-    @Column(name = "fecha")
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(pattern = "yyyy/MM/dd")
-    private Date fecha;
-    
-    @Column(name = "descuento")
-    @NotNull
-    private Double descuento;
+	@Column(name = "fecha")
+	@Temporal(TemporalType.TIMESTAMP)
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+	private Date fecha;
+
+	@Column(name = "descuento")
+	@NotNull
+	private Double descuento;
 
 	public String getTitulo() {
 		return titulo;
@@ -65,5 +67,5 @@ public class Oferta extends BaseEntity{
 	public void setDescuento(Double descuento) {
 		this.descuento = descuento;
 	}
-    
+
 }
