@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -30,7 +31,7 @@ public class Oferta extends BaseEntity{
     private Date fecha;
     
     @Column(name = "descuento")
-    @NotEmpty
+    @NotNull
     private Double descuento;
 
 	public String getTitulo() {
